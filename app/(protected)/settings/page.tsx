@@ -4,7 +4,7 @@ const SettingsPage = async () => {
   const session = await auth();
   return (
     <div>
-      {JSON.stringify({ dummy: 'talal' })}
+      {JSON.stringify(session)}
       <form
         action={async () => {
           'use server';

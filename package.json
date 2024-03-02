@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:db": "pnpm dlx prisma generate && pnpm dlx prisma db push"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^1.4.0",
