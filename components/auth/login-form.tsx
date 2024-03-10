@@ -44,11 +44,11 @@ const LoginForm = () => {
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
     setError('');
     setSuccess('');
+
     startTransition(async () => {
       login(values).then((res) => {
         setError(res?.error);
-        // TODO: add when we add 2FA
-        // setSuccess(res?.success);
+        setSuccess(res?.success);
       });
     });
   };
